@@ -1,16 +1,16 @@
 import { Card, Col, Row } from "react-bootstrap";
-import biodata from "../image/biodata.png"
-import Forms from "../image/Form.png";
-import Hook from "../image/Hooks.png";
-import Routing from "../image/Routing.png";
-import Crud from "../image/Crud.png";
+import biodata from "../image/biodata.jpeg"
+import Forms from "../image/Form.jpeg";
+import Hook from "../image/Hooks.jpeg";
+import Routing from "../image/Routing.jpeg";
+import Crud from "../image/Crud.jpeg";
 export default function ards() {
   return (
     <div>
       <Row>
         <Col sm={4}>
           <Card style={{ width: "18rem" }}>
-            <Card.Img width={200} height={200} src={biodata} />
+            <Card.Img width={200} height={200} src={biodata} alt ="" />
             <Card.Body>
               <Card.Title>Biodata</Card.Title>
               <Card.Text>
@@ -28,7 +28,7 @@ export default function ards() {
         </Col>
         <Col sm={4}>
           <Card style={{ width: "18rem" }}>
-            <Card.Img width={200} height={200} src={Forms} />
+            <Card.Img width={200} height={200} src={Forms} alt =""/>
             <Card.Body>
               <Card.Title>Form and Validation</Card.Title>
               <Card.Text>
@@ -48,7 +48,7 @@ export default function ards() {
         </Col>
         <Col sm={4} className="mt-3">
           <Card style={{ width: "18rem" }}>
-            <Card.Img width={200} height={200} src={Hook}/>
+            <Card.Img width={200} height={200} src={Hook} alt =""/>
             <Card.Body>
               <Card.Title>Hooks API</Card.Title>
               <Card.Text>
@@ -66,7 +66,7 @@ export default function ards() {
         </Col>
         <Col sm={4}>
           <Card style={{ width: "18rem" }}>
-            <Card.Img width={200} height={200} src={Routing} />
+            <Card.Img width={200} height={200} src={Routing} alt =""/>
             <Card.Body>
               <Card.Title>Application Routing</Card.Title>
               <Card.Text>
@@ -84,7 +84,7 @@ export default function ards() {
         </Col>
         <Col sm={4}>
           <Card style={{ width: "18rem" }}>
-            <Card.Img width={200} height={200} src={Crud} />
+            <Card.Img width={200} height={200} src={Crud} alt =""/>
             <Card.Body>
               <Card.Title>Crud MERN (Frondend and Backend Api)</Card.Title>
               <Card.Text>
