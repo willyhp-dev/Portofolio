@@ -1,6 +1,7 @@
 import { Button, Card, Col, ListGroup, Modal, Row } from "react-bootstrap";
 
 import Crud from "../image/Crud.jpeg";
+import POS from "../images/POS_SYSTEM.png";
 import React, { useState } from "react";
 export default function Cards() {
  
@@ -9,21 +10,40 @@ export default function Cards() {
   const handleClosee = () => setShowe(false);
   const handleShowe = () => setShowe(true);
 
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const array = [
-    
     {
-      index: 5,
+      index: 1,
       title: "Crud MERN (Frondend and Backend Api",
       github: 
         "https://github.com/willyhp-dev/Crud-Mern-Backend",
-
       link: "https://crudmernfrontend.herokuapp.com/",
       image: Crud,
+      show: show,
+      handleClose: handleClose,
+      handleShow: handleShow,
+      Project: "Project Terakhir Adalah Crud Mongo Express React Nodejs  ",
+      Fitur: "",
+      Penjelasan: "",
+      video:""
+    },
+    {
+      index: 2,
+      title: "Study Case POS SYSTEM",
+      github: [
+        "https://github.com/willyhp-dev/Frontend-POS-System",
+        "https://github.com/willyhp-dev/Backend-POS-System"
+      ],
+      link: "https://symphonious-manatee-550fb5.netlify.app",
+      image: POS,
       show: showe,
       handleClose: handleClosee,
       handleShow: handleShowe,
-      Project: "Project Terakhir Adalah Crud Mongo Express React Nodejs  ",
-      Fitur: "",
+      Project: "Point of sales Pemesanan Makanan",
+      teknologi: "Axios, Mongoose, mongodb,reactjs hook,sweetalert, expressjs, JWT",
       Penjelasan: "",
       video:""
     },
@@ -39,7 +59,7 @@ export default function Cards() {
     handleShow,
     handleClose,
     project,
-    penjelasan,
+    teknologi,
     video,
   }) => {
     return (
@@ -92,9 +112,9 @@ export default function Cards() {
                         </ListGroup.Item>
                         <ListGroup.Item>
                           <Row>
-                            <Col sm={3}>Penjelasan Fitur</Col>
+                            <Col sm={3}>Teknologi</Col>
                             <Col sm={1}>:</Col>
-                            <Col sm={8}>{penjelasan}</Col>
+                            <Col sm={8}>{teknologi}</Col>
                           </Row>
                         </ListGroup.Item>
                         <ListGroup.Item>
@@ -104,7 +124,6 @@ export default function Cards() {
                             <Col sm={8}>{video}</Col>
                           </Row>
                         </ListGroup.Item>
-                     
                       </ListGroup>
                     </Modal.Body>
                     <Modal.Footer>
@@ -136,7 +155,7 @@ export default function Cards() {
               handleClose={a.handleClose}
               handleShow={a.handleShow}
               project={a.project}
-              penjelasan={a.penjelasan}
+              teknologi={a.teknologi}
               video ={a.video}
             />
           ))}
